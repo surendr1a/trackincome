@@ -4,6 +4,24 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
+## Android Play Store release
+
+The Android app targets API 35 for Google Play submission. Release builds are signed with upload-key values supplied from environment variables or an untracked Gradle properties file:
+
+```bash
+ZENSHIFT_UPLOAD_STORE_FILE=/absolute/path/to/upload.keystore
+ZENSHIFT_UPLOAD_STORE_PASSWORD=your_store_password
+ZENSHIFT_UPLOAD_KEY_ALIAS=your_key_alias
+ZENSHIFT_UPLOAD_KEY_PASSWORD=your_key_password
+```
+
+Build the Play Store bundle with:
+
+```bash
+cd android
+./gradlew bundleRelease
+```
+
 ## Step 1: Start the Metro Server
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
