@@ -4,7 +4,7 @@ import {Job, JobInput} from '../../types';
 async function readJobs(): Promise<Job[]> {
   return readJSON<Job[]>(DB_KEYS.jobs, []);
 }
-
+ 
 async function writeJobs(jobs: Job[]): Promise<void> {
   await writeJSON(DB_KEYS.jobs, jobs);
 }
